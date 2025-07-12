@@ -7,7 +7,7 @@ RUN yum install -y python3
 RUN pip3 install flask
 
 # Copy app.py into the container
-COPY app.py /app.py
+COPY app.ipynb /app.ipynb
 
 # Expose port 5000 for Flask
 EXPOSE 5000
