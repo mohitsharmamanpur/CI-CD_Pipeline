@@ -4,7 +4,7 @@ FROM redhat/ubi8
 WORKDIR /app
 
 # Copy Python app
-COPY app.py /app/app.py
+COPY . /app
 
 # Install Flask
 RUN pip install flask
