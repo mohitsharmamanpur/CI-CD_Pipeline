@@ -11,7 +11,7 @@ RUN dnf install -y python3 python3-pip && \
 COPY . /app
 
 # Expose Flask port
-EXPOSE 5000
+EXPOSE 5006
 
 # Run Flask app
 CMD ["python3", "app.py"]
