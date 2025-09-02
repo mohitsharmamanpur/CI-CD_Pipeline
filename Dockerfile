@@ -1,16 +1,16 @@
-FROM redhat/ubi8
+FROM python:3.9-slim
 
-# Install Python 3
-RUN yum install -y python3 && yum clean all
+# Set working directory
+WORKDIR /app
+
+# Copy Python app
+COPY app.py /app/app.py
 
 # Install Flask
-RUN pip3 install flask
+RUN pip install flask
 
-# Copy Flask app into container
-COPY app.ipynb /app.ipynb
-
-# Expose port 5000
+# Expose port
 EXPOSE 5000
 
-# Run the app
-CMD ["python3", "/app.py"]
+# Run Flask app
+CMD ["python", "app.py"]
